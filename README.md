@@ -1,1 +1,14 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
+# Personal Homepage
+
+Source for my GitHub Pages site.
+
+## Files
+
+- `index.html`: main homepage
+- `stylesheet.css`: styles used by `index.html`
+- `email.html`, `weixin.html`: contact pages
+- `images/`: assets referenced by `index.html`
+
+## Notes
+
+This site originally started from Jon Barron's academic website template: https://jonbarron.info/.

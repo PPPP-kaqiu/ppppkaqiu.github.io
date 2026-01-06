@@ -75,11 +75,9 @@ a:hover {
 }
 
 body,
-td,
-th,
-tr,
 p,
-a {
+a,
+li {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -90,7 +88,7 @@ strong {
 }
 
 h2 {
-  margin: 0;
+  margin: 0 0 8px 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
@@ -103,10 +101,11 @@ h2 {
 }
 
 .name {
-  padding-top: 20px;
-  margin: 0;
+  padding-top: 12px;
+  margin: 0 0 12px 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
+  font-weight: 400;
 }
 
 .one {
@@ -139,4 +138,145 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+/* Layout */
+body {
+  margin: 0;
+  padding: 24px 16px;
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+}
+
+mark {
+  padding: 0 0.2em;
+  border-radius: 4px;
+  background: #fff4cc;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+ul {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-aside {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 220px;
+  height: 280px;
+  max-width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: var(--avatar-x, 50%) var(--avatar-y, 50%);
+  display: block;
+}
+
+.links {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.sep {
+  padding: 0 8px;
+  color: #999;
+}
+
+.section {
+  margin-top: 34px;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 14px 14px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+}
+
+.entry-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+.entry-img--logo {
+  width: 130px;
+  height: 100px;
+}
+
+.entry-body p:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  margin-top: 8px;
+  padding-left: 22px;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 18px 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .name {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .hero-main {
+    text-align: left;
+  }
+
+  .avatar {
+    width: 180px;
+    height: 240px;
+  }
+
+  .entry {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-media {
+    justify-content: flex-start;
+  }
 }
