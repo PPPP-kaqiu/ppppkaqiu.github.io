@@ -252,8 +252,21 @@ ul {
 }
 
 .entry-body .papertitle {
-  display: inline-block;
-  margin-bottom: 4px;
+  display: inline;
+  margin-bottom: 0;
+}
+
+.entry-heading {
+  display: block;
+}
+
+.entry-links-inline {
+  display: inline;
+  margin-left: 8px;
+}
+
+.entry-links-inline a + a {
+  margin-left: 8px;
 }
 
 .entry-body p:last-child {
@@ -275,6 +288,53 @@ ul {
   text-align: center;
   color: #999;
   font-size: 14px;
+}
+
+.contact-page {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 640px;
+  padding: 32px;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.contact-kicker {
+  margin-bottom: 8px;
+  color: #999;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-title {
+  margin: 0 0 12px 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contact-text {
+  color: #555;
+}
+
+.contact-value {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.contact-back {
+  margin-bottom: 0;
 }
 
 @media (max-width: 720px) {
@@ -307,6 +367,22 @@ ul {
 
   .entry-media {
     justify-content: flex-start;
+  }
+
+  .contact-page {
+    min-height: auto;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-value {
+    font-size: 20px;
   }
 }
 
@@ -352,5 +428,19 @@ ul {
   .footer {
     border-top-color: #333;
     color: #777;
+  }
+
+  .contact-card {
+    border-color: #333;
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .contact-kicker {
+    color: #888;
+  }
+
+  .contact-text {
+    color: #bbb;
   }
 }
